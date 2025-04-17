@@ -7,12 +7,12 @@ const Home = () => (
     <div className="hero-text">
       <h1>Hi, I'm <span className="highlight">Courage</span></h1>
       <p>
-      You’re building something big, and I’m here to handle the things that slow you down whether it’s DMs, tasks, follow-ups, content calendars, or all that behind-the-scenes work. You don’t need to explain everything twice. I get it, and I get it done.
+        You’re building something big, and I’m here to handle the things that slow you down whether it’s DMs, tasks, follow-ups, content calendars, or all that behind-the-scenes work. You don’t need to explain everything twice. I get it, and I get it done.
       </p>
       <Link to="/contact" className="cta-button">Work With Me</Link>
     </div>
     <div className="hero-image">
-      <img src="/profile.jpg" alt="Profile" />
+      <img src={process.env.PUBLIC_URL + '/profile.jpg'} alt="Profile" />
     </div>
   </div>
 );
@@ -22,34 +22,33 @@ const About = () => (
     <h2>About Me</h2>
     <p>Hi, I am Nigerian virtual assistant who will make your life easier and get things done without stress.</p>
 
-<p>I help busy people, small business owners, and teams handle the work they don’t have time for. From managing emails and scheduling meetings to handling documents, research, and tech tools. I take care of the background work so you can focus on what matters.</p>
+    <p>I help busy people, small business owners, and teams handle the work they don’t have time for. From managing emails and scheduling meetings to handling documents, research, and tech tools. I take care of the background work so you can focus on what matters.</p>
 
-<h3>Here’s what I do well:</h3>
-<ul>
-  <li>Turn scattered tasks into clear plans</li>
-  <li>Keep your calendar and emails under control</li>
-  <li>Help with research, reports, and light content work</li>
-  <li>Set up tools like Google Workspace, Notion, Trello, Canva, etc.</li>
-  <li>Use AI tools like ChatGPT to work smarter and faster</li>
-</ul>
+    <h3>Here’s what I do well:</h3>
+    <ul>
+      <li>Turn scattered tasks into clear plans</li>
+      <li>Keep your calendar and emails under control</li>
+      <li>Help with research, reports, and light content work</li>
+      <li>Set up tools like Google Workspace, Notion, Trello, Canva, etc.</li>
+      <li>Use AI tools like ChatGPT to work smarter and faster</li>
+    </ul>
 
-<h3>Why I do this:</h3>
-<p>I enjoy bringing order to busy days. I love helping people save time and reduce stress, especially when they’re juggling so much.</p>
+    <h3>Why I do this:</h3>
+    <p>I enjoy bringing order to busy days. I love helping people save time and reduce stress, especially when they’re juggling so much.</p>
 
-<h3>Why people like working with me:</h3>
-<ul>
-  <li>I learn fast, I am reliable, and I don’t wait for you to repeat things twice.</li>
-  <li>I work with initiative, I don’t need micromanaging.</li>
-  <li>I bring positive energy and good communication (even when work is plenty).</li>
-  <li>I take your work seriously and treat it like my own</li>
-</ul>
+    <h3>Why people like working with me:</h3>
+    <ul>
+      <li>I learn fast, I am reliable, and I don’t wait for you to repeat things twice.</li>
+      <li>I work with initiative, I don’t need micromanaging.</li>
+      <li>I bring positive energy and good communication (even when work is plenty).</li>
+      <li>I take your work seriously and treat it like my own</li>
+    </ul>
 
-<h3>When I’m not working:</h3>
-<p>I’m either scrolling through TikTok, or relaxing with a good movie and food.</p>
+    <h3>When I’m not working:</h3>
+    <p>I’m either scrolling through TikTok, or relaxing with a good movie and food.</p>
 
-<p><strong>If you’re tired of doing everything alone, I’m ready to help.</strong></p>
-
-</div>
+    <p><strong>If you’re tired of doing everything alone, I’m ready to help.</strong></p>
+  </div>
 );
 
 const ResumeHighlights = () => (
@@ -59,15 +58,16 @@ const ResumeHighlights = () => (
     <h3>Education</h3>
     <ul>
       <li>Bingham University, Computer Science (2023) - First Class (4.51 CGPA)</li>
-      <li>ALX Virtual Assistant Program 
+      <li>ALX Virtual Assistant Program
         <ul>
           <li>Mastered CRM workflows, task automation, and client retention strategies.</li>
         </ul>
       </li>
-      <li>Google Digital Garage – Digital Marketing Fundamentals </li>
+      <li>Google Digital Garage – Digital Marketing Fundamentals</li>
         <ul>
           <li>Skills: SEO, content strategy, and audience engagement.</li>
-    </ul></ul>
+        </ul>
+    </ul>
 
     <h3>Tools I Use</h3>
     <ul>
@@ -90,16 +90,15 @@ const ResumeHighlights = () => (
   </div>
 );
 
-
 const Contact = () => (
   <div className="contact">
     <h2>Contact Me</h2>
     <form action="https://formspree.io/f/xrbpepqy" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send Message</button>
-</form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
 );
 
@@ -113,7 +112,7 @@ const WorkHistory = () => (
       <p className="job-title">Tech Branding and AI Visuals</p>
       <p className="job-duration">2022 - Present</p>
       <div className="job-image">
-        <img src="GRAPHIC DESIGN.png" alt="AI branding project samples" />
+        <img src={process.env.PUBLIC_URL + '/GRAPHIC DESIGN.png'} alt="AI branding project samples" />
       </div>
       <p className="job-description">
         Created over 150 designs for tech and AI startups, including LinkedIn posts, email banners, and product graphics.
@@ -132,7 +131,7 @@ const WorkHistory = () => (
       <p className="job-title">AI and SaaS Articles</p>
       <p className="job-duration">June 2023 - Present</p>
       <div className="job-image">
-        <img src="content.png" alt="AI writing portfolio samples" />
+        <img src={process.env.PUBLIC_URL + '/content.png'} alt="AI writing portfolio samples" />
       </div>
       <p className="job-description">
         Wrote more than 80 articles on AI, machine learning, and tech in Nigeria.
@@ -151,7 +150,7 @@ const WorkHistory = () => (
       <p className="job-title">Email Campaigns and Client Follow-up</p>
       <p className="job-duration">Feb 2024 - Present</p>
       <div className="job-image">
-        <img src="email.png" alt="Email campaign performance dashboard" />
+        <img src={process.env.PUBLIC_URL + '/email.png'} alt="Email campaign performance dashboard" />
       </div>
       <p className="job-description">
         Planned and set up 22 email campaigns to guide customers through different steps.
@@ -170,7 +169,7 @@ const WorkHistory = () => (
       <p className="job-title">Inclusifund | African Startup News and Learning</p>
       <p className="job-duration">2024 - Present</p>
       <div className="job-image">
-        <img src="inclusi.png" alt="Inclusifund website preview" />
+        <img src={process.env.PUBLIC_URL + '/inclusi.png'} alt="Inclusifund website preview" />
       </div>
       <p className="job-description">
         Helped create and manage content for Inclusifund, a platform that shares startup funding news and learning tips.
@@ -189,14 +188,14 @@ const Navbar = () => (
   <nav>
     <div className="logo">
       <Link to="/">
-        <img src="/VALOGO.png" alt="Paul Courage Logo" className="logo-img" />
+        <img src={process.env.PUBLIC_URL + '/VALOGO.png'} alt="Paul Courage Logo" className="logo-img" />
       </Link>
     </div>
     <div className="nav-links">
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
       <Link to="/resume-highlights">Resume Highlights</Link>
-      <Link to="/work-history">Work History</Link> {/* Add Work History Link */}
+      <Link to="/work-history">Work History</Link>
       <Link to="/contact">Contact</Link>
     </div>
   </nav>
@@ -218,7 +217,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/resume-highlights" element={<ResumeHighlights />} />
-            <Route path="/work-history" element={<WorkHistory />} /> {/* Add Route */}
+            <Route path="/work-history" element={<WorkHistory />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
