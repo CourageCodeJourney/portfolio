@@ -1,38 +1,218 @@
-.App {
+/* General Styles */
+body, html {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f6ee;
+  color: #333;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the main container takes full viewport height */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.logo img {
+  width: 150px; /* Adjust size as needed */
+  height: 80px; /* Maintain aspect ratio */
+}
+
+/* Main content expands to push footer down */
+main {
+  flex: 1;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 20px;  /* Increase this value as needed */
+}
+
+.nav-links a:hover {
+  color: #f4a261;
+}
+
+p {
+  font-size: 18px; /* Adjust as needed */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+}
+
+.highlight {
+  color: #f4a261;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #f4a261;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #e76f51;
+}
+
+/* Hero Image */
+.hero-image img {
+  width: 400px;  /* Increase the width */
+  height: auto;  /* Maintain aspect ratio */
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Sections (About, Portfolio, Contact) */
+.about, .resume-highlights, .contact {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+h2 {
+  color: #f4a261;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #f4a261;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e76f51;
+}
+
+.work-history {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+}
+
+.work-history h2 {
+  font-size: 2rem;
+  color: #f4a261;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.work-item {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  transition: transform 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.work-item:hover {
+  transform: scale(1.02);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.job-title {
+  font-weight: bold;
+  color: #222;
+}
+
+.job-duration {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.job-description {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.job-tags {
+  margin-top: 10px;
+}
+
+.job-tags span {
+  display: inline-block;
+  background: #f4a261;
   color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-right: 6px;
+  font-size: 0.85rem;
 }
 
-.App-link {
-  color: #61dafb;
+.job-image {
+  margin: 20px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.job-image img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #eee;
+}
+
+/* Footer always stays at bottom */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
 }
